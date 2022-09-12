@@ -1,0 +1,2 @@
+../Core/Src/rectrix_sms.c:6:6:rectrix_init	24	static
+../Core/Src/rectrix_sms.c:27:6:rectrix_SendMessage	24	static

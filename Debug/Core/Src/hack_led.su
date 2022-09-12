@@ -1,0 +1,4 @@
+../Core/Src/hack_led.c:21:6:init_hack_led	24	static
+../Core/Src/hack_led.c:28:7:hack_led_off	16	static
+../Core/Src/hack_led.c:47:7:hack_led_set	24	static
+../Core/Src/hack_led.c:56:6:hack_led_gpio_set_reset	16	static

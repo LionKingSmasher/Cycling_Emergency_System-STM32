@@ -1,0 +1,8 @@
+../Core/Src/madgwick.c:18:14:invSqrt	32	static
+../Core/Src/madgwick.c:29:6:madgwickUpdate	192	static
+../Core/Src/madgwick.c:161:6:computeAngles	8	static
+../Core/Src/madgwick.c:171:7:getYaw	8	static
+../Core/Src/madgwick.c:177:7:getPitch	8	static
+../Core/Src/madgwick.c:183:7:getRoll	8	static
+../Core/Src/madgwick.c:189:6:getGravity	8	static
+../Core/Src/madgwick.c:194:6:getLinearAccel	16	static
