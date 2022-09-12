@@ -22,7 +22,7 @@ void init_hack_led(hack_led_t* hack_led, GPIO_TypeDef* gpio, uint16_t pin_num){
 	hack_led->current_state = TURN_OFF;
 	hack_led->gpio.gpio = gpio;
 	hack_led->gpio.pin_num = pin_num;
-	HAL_GPIO_WritePin(gpio, pin_num, GPIO_PIN_SET);
+//	HAL_GPIO_WritePin(gpio, pin_num, GPIO_PIN_SET);
 }
 
 _Bool hack_led_off(hack_led_t* hack_led){

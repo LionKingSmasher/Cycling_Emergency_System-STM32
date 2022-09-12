@@ -7,6 +7,6 @@ typedef struct {
 	char my_device_message[64];
 }rectirx_sms_t;
 
-void rectrix_init(rectirx_sms_t* sms);
+void rectrix_init(rectirx_sms_t* sms, const char* phone_number);
 void rectrix_SendMessage(rectirx_sms_t* sms, const char* str);
 void setting_phone_number(rectirx_sms_t* sms, const char* pone_number);

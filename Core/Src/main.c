@@ -245,8 +245,7 @@ int main(void)
   sms.my_device = huart2;
   sms.sms_device = huart1;
 
-  rectrix_init(&sms);
-  setting_phone_number(&sms, "1111111111"); // Setting Phone Number
+  rectrix_init(&sms, "1111111111"); // XBee3 Setting
 
   HAL_TIMEx_PWMN_Start(&htim2, TIM_CHANNEL_1);
   HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
@@ -599,7 +598,10 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4|LD2_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, GPIO_PIN_SET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : PB4 LD2_Pin */
   GPIO_InitStruct.Pin = GPIO_PIN_4|LD2_Pin;
@@ -644,7 +646,7 @@ void lsm9ds1_self_test(void){
 		while(1);
 	}
 	else{
-		rectrix_SendMessage(&sms, "Cycling Emergency System Enabled")
+		rectrix_SendMessage(&sms, "Cycling Emergency System Enabled");
 	}
 
 	lsm9ds1_dev_reset_set(&dev_ctx_mag, &dev_ctx_imu, PROPERTY_ENABLE);
